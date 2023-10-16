@@ -9,8 +9,9 @@ import java.time.Duration;
 
 public class WaitForElement {
 //Class implementing different 'waits', depending on the conditions
+    private static int time;
     public static WebDriverWait getWebDriverWait() {
-        return  new WebDriverWait(DriverManager.getWebdriver(), Duration.ofSeconds(10));
+        return  new WebDriverWait(DriverManager.getWebdriver(), Duration.ofSeconds(time));
     }
 
     public static void waitForElementToBeVisible(WebElement webElement) {
@@ -19,5 +20,9 @@ public class WaitForElement {
 
     public static void waitUntilElementClickable(WebElement webElement) {
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(webElement));
+    }
+
+    public static void setWaitDuration(int seconds) {
+        time = seconds;
     }
 }

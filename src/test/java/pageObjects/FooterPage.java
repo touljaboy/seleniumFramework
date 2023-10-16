@@ -26,5 +26,13 @@ public class FooterPage extends BasePage{
         return this;
     }
 
+//    @Step("Assert that element Dog Banner is invisible")
+//    public FooterPage assertThatBannerIsNotVisible() {
+//        log().info("Checking if dogbanner is invisible");
+//        assertThat(afterLoginBanner).isNotDisplayed();
+//        log().info("AfterLoginBanner is invisible!");
+//        return this;
+//    }
+
 
 }
